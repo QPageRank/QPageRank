@@ -1,0 +1,65 @@
+{
+    "python2path": "D:/Python27/ArcGIS10.2/python.exe",
+    "roadselect": {
+        "global": {
+            "noise": [
+                0
+            ],
+            "evolution_way": "2",
+            "block_num": 500000,
+            "node_num": 1098
+        },
+        "preprocessing": {
+            "orignosmroadpath": "/Data/RoadSelect/OrignOSMRoad/guangdong_road.shp",
+            "basicpath": "/Data/RoadSelect"
+        },
+        "creatstart": {
+            "block_size": 20,
+            "alpha": 1.0
+        },
+        "creatu": {
+            "proj_output_hdf5_filename": "/Data/Temp/RoadSelect/UMatrix/proj/proj.h5",
+            "swap_output_hdf5_filename": "/Data/Temp/RoadSelect/UMatrix/swap/swap.h5",
+            "u_output_hdf5_filename": "/Data/Temp/RoadSelect/UMatrix/U//5/u_",
+            "temp_path": "/Data/Temp/RoadSelect/UMatrix/temp",
+            "max_cache_blocks": 10,
+            "alpha": 1.0
+        },
+        "applyu": {
+            "next_path": "/Data/Temp/RoadSelect/UMatrix/temp/nextstate.h5",
+            "pre_path": "/Data/Temp/RoadSelect/UMatrix/temp/prestate.h5",
+            "output_path": "/Data/Temp/RoadSelect/UMatrix/result/5/result_alpha_",
+            "max_iterations": 100,
+            "tolerance": 1e-09,
+            "alphaway": "1",
+            "alpha_s": [
+                0.85
+            ]
+        },
+        "resultprocess": {
+            "accpath": "/Data/Temp/RoadSelect/result/6/accresult.json",
+            "roadshowpath": "/Data/RoadSelect/Roadgdbdata/cq.gdb",
+            "layername": "cqroad",
+            "selectshppath": "/Data/RoadSelect/Roadgdbdata/nz/nzresult_quantum_2.shp",
+            "zoomratio": [
+                0.2,
+                0.4,
+                0.6
+            ]
+        },
+        "classic": {
+            "max_iterations": 100,
+            "tolerance": 1e-09,
+            "alpha": [
+                0.85
+            ]
+        },
+        "GNN": {
+            "train_format": "shp",
+            "test_format": "gdb",
+            "train_layer": null,
+            "test_layer": "road_116",
+            "gnnresult": "/Data/RoadSelect/107/Result/GNNResult.json"
+        }
+    }
+}
